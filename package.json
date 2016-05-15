@@ -1,0 +1,11 @@
+{
+  "name": "web-message-board",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

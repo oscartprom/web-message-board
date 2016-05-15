@@ -1,0 +1,54 @@
+$BOX_SIZE: 25px;
+
+body {
+
+  margin: 0;
+
+  div {
+    &.box {
+      position: absolute;
+      height: $BOX_SIZE;
+      width: $BOX_SIZE;
+    }
+    &.black {
+      background-color: black;
+    }
+    &.white {
+      background-color: white;
+    }
+    &.turn-black {
+      animation-name: turn-black;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    &.turn-white {
+      animation-name: turn-white;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes turn-black {
+  0% {
+    background-color: white;
+    transform: rotate(0deg);
+  }
+  100% {
+    background-color: black;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes turn-white {
+  0% {
+    background-color: black;
+    transform: rotate(180deg);
+  }
+  100% {
+    background-color: white;
+    transform: rotate(0deg);
+  }
+}
